@@ -24,8 +24,8 @@ body{
     position: absolute;
     inset: 0;
 
-    -webkit-mask: url('../../public/images/home-img.png');
-    mask: url('../../public/images/home-img.png');
+    -webkit-mask: url('../assets/home-img.png');
+    mask: url('../assets/home-img.png');
 
 }
 

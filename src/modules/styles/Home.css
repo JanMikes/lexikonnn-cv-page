@@ -1,7 +1,7 @@
 @import '../../styles/Colors.css';
 
 .section-parent{
-    background-image: url('../../../public/images/home-img.png');
+    background-image: url('../../assets/home-img.png');
     background-position: bottom;
     background-size: cover;
 

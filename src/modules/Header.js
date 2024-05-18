@@ -48,7 +48,7 @@ const Header = ({ scrollToAbout, scrollToResume, scrollToHome }) => {
                         </div>
                         <div className='mobile-container'>
                             <FontAwesomeIcon icon={faMobileScreenButton} style={{ color: "#f8f8f8" }} />
-                            <a className="mobile"><span className='preset'>+420 </span> 731 002 086</a>
+                            <span className="mobile"><span className='preset'>+420 </span> 731 002 086</span>
                         </div>
                     </ul>
                 </div>
@@ -62,7 +62,7 @@ const Header = ({ scrollToAbout, scrollToResume, scrollToHome }) => {
                 <div className="contact-wrapper">
 
                     <FontAwesomeIcon icon={faMobileScreenButton} style={{ color: "#f8f8f8" }} />
-                    <a className="contact"><span className='preset'>+420 </span> 731 002 086</a>
+                    <span className="contact"><span className='preset'>+420 </span> 731 002 086</span>
                 </div>
             </div>
 

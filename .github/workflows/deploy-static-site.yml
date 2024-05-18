@@ -21,8 +21,10 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Build job
-  build:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -39,12 +41,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Get GitHub Pages URL
-        id: get-url
-        run: echo "PUBLIC_URL=https://${GITHUB_REPOSITORY_OWNER}.github.io/${GITHUB_REPOSITORY#*/}" >> $GITHUB_ENV
-
       - name: Build the project
-        run: PUBLIC_URL=${{ env.PUBLIC_URL }} CI=false npm run build
+        run: PUBLIC_URL=${{ steps.deployment.outputs.page_url }} CI=false npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
